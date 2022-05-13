@@ -140,7 +140,7 @@ class DMTrainer(BaseTrainer):
                     self.log(losses, discs, stats)
                     self.logger.debug("GPU Memory usage: max mem_alloc = %.1fM / %.1fM",
                                       torch.cuda.max_memory_allocated() / 1000 / 1000,
-                                      torch.cuda.max_memory_cached() / 1000 / 1000)
+                                      torch.cuda.max_memory_reserved() / 1000 / 1000)
                     losses.resets()
                     discs.resets()
                     stats.resets()
